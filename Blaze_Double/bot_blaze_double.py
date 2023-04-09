@@ -4,14 +4,15 @@ import telebot
 import time
 import json
 import csv
+import os
 
 class WebScraper:
     
     def __init__(self):
         # EDIT!
         self.game = "Blaze Double"
-        self.token = 'TOKEN BOT'
-        self.chat_id = 'CHAT ID'
+        self.token = os.getenv('CHAT_TOKEN')
+        self.chat_id = os.getenv('CHAT_ID')
         self.url_API = 'http://api.mxvinvest.com:63000/blaze-double'
         self.gales = 2
         self.protection = True
